@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="conatiner">
+<div class="container">
     @livewire('post-component')
 </div>
 @endsection
