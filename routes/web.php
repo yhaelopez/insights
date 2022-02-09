@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RQueryController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts');
+    return redirect('login');
 });
 
 Route::get('r', RQueryController::class)->name('r');

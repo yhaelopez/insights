@@ -16,7 +16,7 @@
             <td>{{ $post->title }}</td>
             <td>{{ $post->body }}</td>
             <td>
-                <button class="btn btn-warning">
+                <button wire:click="edit({{ $post->id }})" class="btn btn-warning">
                     Editar
                 </button>
             </td>
