@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('r', RQueryController::class)->name('r');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
