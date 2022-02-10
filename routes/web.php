@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('login');
-});
+})->name('index');
 
 Route::get('r', RQueryController::class)->name('r');
 

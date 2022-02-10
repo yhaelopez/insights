@@ -12,7 +12,25 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'j8c',
-            'email' => 'dev@j8c.com.mx',
+            'email' => 'contacto@juarezsoft.com.mx',
+            'password' => Hash::make('Insights#55'),
+            'email_verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Alberto Valero',
+            'email' => 'alberto.valero@juarezsoft.com.mx',
+            'password' => Hash::make('Insights#55'),
+            'email_verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Adan Najera',
+            'email' => 'adan.najera@juarezsoft.com.mx',
+            'password' => Hash::make('Insights#55'),
+            'email_verified_at' => now(),
+        ]);
+        User::create([
+            'name' => 'Yhael Lopez',
+            'email' => 'yhael.lopez@juarezsoft.com.mx',
             'password' => Hash::make('Insights#55'),
             'email_verified_at' => now(),
         ]);

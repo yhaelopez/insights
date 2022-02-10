@@ -3,5 +3,11 @@
     "auth.description": "Insights' description.",
     "login": "Iniciar Sesión",
     "email": "Correo electrónico",
-    "password": "Contraseña"
+    "password": "Contraseña",
+    "reset.password": "Reestablecer Contraseña",
+    "send.password.reset.link": "Enviar enlace de recuperación de contraseña",
+    "remembered.your.password.?": "¿Recordó su contraseña?",
+    "confirm.password": "Confirmar contraseña",
+    "reset": "Reestablecer",
+    "forgot.password.?": "¿Olvidó su contraseña?"
 }
