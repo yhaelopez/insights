@@ -1,13 +1,21 @@
 {
     "title": "Insights",
-    "auth.description": "Insights' description.",
-    "login": "Iniciar Sesión",
+    "description": "Insights' description.",
+    "login": "Iniciar sesión",
     "email": "Correo electrónico",
     "password": "Contraseña",
-    "reset.password": "Reestablecer Contraseña",
+    "reset.password": "Restablecer Contraseña",
     "send.password.reset.link": "Enviar enlace de recuperación de contraseña",
     "remembered.your.password.?": "¿Recordó su contraseña?",
     "confirm.password": "Confirmar contraseña",
-    "reset": "Reestablecer",
-    "forgot.password.?": "¿Olvidó su contraseña?"
+    "reset": "Restablecer",
+    "forgot.password.?": "¿Olvidó su contraseña?",
+    "logout": "Cerrar sesión",
+    "users": "Usuarios",
+    "create": "Crear",
+    "create.user": "Crear Usuario",
+    "edit.user": "Editar Usuario",
+    "name": "Nombre",
+    "actions": "Acciones",
+    "created.at": "Creado el"
 }

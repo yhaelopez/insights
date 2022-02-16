@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Permission;
 
 class UserSeeder extends Seeder
 {
@@ -28,12 +29,14 @@ class UserSeeder extends Seeder
             'password' => Hash::make('Insights#55'),
             'email_verified_at' => now(),
         ]);
-        User::create([
+        $user = User::create([
             'name' => 'Yhael Lopez',
             'email' => 'yhael.lopez@juarezsoft.com.mx',
             'password' => Hash::make('Insights#55'),
             'email_verified_at' => now(),
         ]);
+
+        $user->givePermissionTo(Permission::get()->pluck('name'));
         User::factory(10)->create();
 
     }
