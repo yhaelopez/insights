@@ -7,10 +7,12 @@ use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+
     private $userService;
 
     public function __construct(UserService $userService)
@@ -67,8 +69,17 @@ class UserController extends Controller
     public function restore(Request $request)
     {
         $user = User::withTrashed()->find($request->user);
+        $this->authorize('restore', $user);
         $user->restore();
-        return redirect()->route('users.index')->withSuccess(__('user.restore.success', ['user' => $user->email]));
+        return redirect()->route('users.index', ['trashed'])->withSuccess(__('user.restore.success', ['user' => $user->email]));
+    }
+
+    public function permissions(User $user)
+    {
+        $this->authorize('permissions', $user);
+        $user->load(['permissions']);
+        $permissions = Permission::get();
+        return view('app.users.permissions', compact('user', 'permissions'));
     }
 
 }

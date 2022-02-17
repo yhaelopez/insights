@@ -30,20 +30,6 @@ class UserPolicy
         }
     }
 
-    public function store(User $user, User $model)
-    {
-        if($user->can(['store user'])) {
-            return true;
-        }
-    }
-
-    public function edit(User $user, User $model)
-    {
-        if($user->can(['edit user'])) {
-            return true;
-        }
-    }
-
     public function update(User $user, User $model)
     {
         if($user->can(['update user'])) {
@@ -54,13 +40,22 @@ class UserPolicy
     public function delete(User $user, User $model)
     {
         if($user->can(['delete user'])) {
-            return true;
+            if($user->id != $model->id) {
+                return true;
+            }
         }
     }
 
     public function restore(User $user, User $model)
     {
         if($user->can(['restore user'])) {
+            return true;
+        }
+    }
+
+    public function permissions(User $user)
+    {
+        if($user->can(['view user permissions'])) {
             return true;
         }
     }

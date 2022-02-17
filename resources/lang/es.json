@@ -13,9 +13,17 @@
     "logout": "Cerrar sesión",
     "users": "Usuarios",
     "create": "Crear",
-    "create.user": "Crear Usuario",
+    "new.user": "Nuevo Usuario",
     "edit.user": "Editar Usuario",
+    "new.password": "Nueva contraseña",
+    "if.blank.password": "Si se deja en blanco, la contraseña no cambiará",
+    "min.8.char": "Mínimo 8 caracteres",
     "name": "Nombre",
     "actions": "Acciones",
-    "created.at": "Creado el"
+    "confirmation": "Confirmación",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "created.at": "Creado el",
+    "delete.confirmation":"¿Está seguro que desea deshabilitar a ",
+    "save": "Guardar"
 }

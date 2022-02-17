@@ -29,7 +29,12 @@ Route::get('r', RQueryController::class)->name('r');
 
 Auth::routes();
 
-Route::match(['PUT', 'PATCH'], 'users/{user}/restore', [UserController::class, 'restore'])->name('users.restore');
+Route::controller(UserController::class)->group(function() {
+
+    Route::match(['PUT', 'PATCH'], 'users/{user}/restore', 'restore')->name('users.restore');
+    Route::get('users/{user}/permissions', 'permissions')->name('users.permissions');
+
+});
 Route::resource('users', UserController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
