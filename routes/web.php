@@ -38,3 +38,6 @@ Route::controller(UserController::class)->group(function() {
 Route::resource('users', UserController::class);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/mockup', [App\Http\Controllers\MockupController::class, 'index'])->name('mockup');
+Route::get('/mockup-resultado', [App\Http\Controllers\MockupController::class, 'resultado'])->name('resultado');
+Route::get('/mockup-cargas', [App\Http\Controllers\MockupController::class, 'cargas'])->name('cargas');

@@ -25,5 +25,6 @@
     "confirm": "Confirmar",
     "created.at": "Creado el",
     "delete.confirmation":"¿Está seguro que desea deshabilitar a ",
-    "save": "Guardar"
+    "save": "Guardar",
+    "title-mockup": "Auditoría"
 }
